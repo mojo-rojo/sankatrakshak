@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        
+        
+        div.card {
+          width: 80%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          text-align: center;
+          margin:auto;
+        }
+        
+        div.header {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px;
+          font-size: 40px;
+          
+          
+        }
+        
+        div.container {
+          padding: 10px;
+        }
+        
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          }
+        .box {
+            border:none;
+            padding: 10px 20px;
+            border-radius:5px;
+            margin-top:5px;
+            box-shadow: 0 8px 6px -6px black;
+          }
+        #status{
+            margin-left:80px;
+        
+        
+        }
+        #priority{
+            margin-left:70px;
+        
+        
+        }
+        #emergency{
+            margin-left:46px;
+        
+        
+        }
+          select:focus{
+            outline:none;
+        }
+        input[type=text] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        
+        
+        </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1 style="color:#1A5276">Sankat Rakshak AI</h1>
+                    </div>
+            <div class="panel-body">
+                        <table class="table table-condensed table-striped">
+        <thead>
+            <tr>
+                        <th></th>
+              <th>Caller</th>
+              <th>Emergency</th>
+              <th>Time</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+               <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                <td>+91 1234567890</td>
+                <td>Mathias</td>
+                <td>Leme</td>
+                <td>SP</td>
+                  <td>new</td>
+            </tr>
+                
+            <tr>
+                <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo1"> 
+                  <table class="table table-striped">
+                          <thead>
+                            <tr class="info">
+                                                        
+                                                </thead>	
+                                                <h2> </h2>
+                                                <h2></h2>
+                                                <div class="card">
+                                                <div class="row">
+                                                  <div class="column" style="background-color:#7CB9E8 ; box-shadow: 0 8px 6px -6px black;">
+                                                    <h2>Transcript</h2>
+                                                    <input type="text" style="box-shadow: 0 8px 6px -6px black;" />
+                                                  </div>
+                                                  <div class="column" style="background-color:#87CEFA;box-shadow: 0 8px 6px -6px black; ">
+                                                    <h2></h2>
+                                                    
+                                                      <div>
+                                                          <label  for="language">Status</label>
+                                                         <select class='box' name="language" id="status">
+                                                         
+                                                         <option value="python">Dispatched</option>
+                                                         <option value="c++" >Open</option>
+                                                
+                                                
+                                                      </select>
+                                                       </div>
+                                                       <div>
+                                                       <label for="language">Priority</label>
+                                                       <select class='box' name="language" id="priority">
+                                                        <option value="javascript" style = "background-color: red;">High</option>
+                                                        <option value="python">Medum</option>
+                                                        <option value="c++" >TBD</option>
+                                                        
+                                                      </select>
+                                                      </div>
+                                                      <div>
+                                                      <label for="language">Emergency</label>
+                                                       <select class='box' name="language" id="emergency">
+                                                        <option value="javascript">Medical</option>
+                                                        <option value="python">Crime in progress</option>
+                                                        <option value="c++" >Fire</option>
+                                                        <option value="java" selected>Other Emergency</option>
+                                                      </select>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                
+                                                  <div class="container" style="background-color:#ffffff">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15065.216069195389!2d72.96180962917961!3d19.269140997318996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba21d0dfeb1%3A0x611536d2f004daae!2sKasarvadavali%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400615!5e0!3m2!1sen!2sin!4v1680343133035!5m2!1sen!2sin" width="500" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                  </div>
+                                                </div>
+                                                <tbody>
+                                                    
+                        
+                                                    
+                                                     <tr>
+                <td colspan="12" class="hiddenRow">
+                                <div class="accordian-body collapse" id="demo10"> 
+                  <table class="table table-striped">
+                          <thead>
+                            <tr>
+                                                        <td><a href="#"> XPTO 1</a></td>
+                                                        <td>XPTO 2</td>
+                                                        <td>Obs</td>
+                                                    </tr>
+                            <tr>
+                                                        <th>item 1</th>
+                                                        <th>item 2</th>
+                                                        <th>item 3 </th>
+                                                        <th>item 4</th>
+                                                        <th>item 5</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                                        <td>item 1</td>
+                                                        <td>item 2</td>
+                                                        <td>item 3</td>
+                                                        <td>item 4</td>
+                                                        <td>item 5</td>
+                                                        <td>
+                                                                <a href="#" class="btn btn-default btn-sm">
+                                                  <i class="glyphicon glyphicon-cog"></i>
+                                                                </a>
+                                                        </td>
+                                                    </tr>
+                          </tbody>
+                       </table>
+                  
+                  </div> 
+              </td>
+            </tr>
+                                                                                                            
+                           
+             
+                                   
+                                    
+                   
+                          </tbody>
+                       </table>
+                  
+                  </div> 
+              </td>
+            </tr>
+          
+          
+                
+            <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+                 <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                 <td>+91 9876543210</td>
+                <td>Santos</td>
+                <td>São Paulo</td>
+                <td>SP</td>
+              <td> new</td>
+            </tr>
+            <tr>
+                <td colspan="12" class="hiddenRow">
+                    <div class="accordian-body collapse" id="demo1"> 
+      <table class="table table-striped">
+              <thead>
+                <tr class="info">
+                                            
+                                    </thead>	
+                                    <h2> </h2>
+                                    <h2></h2>
+                                    <div class="card">
+                                    <div class="row">
+                                      <div class="column" style="background-color:#7CB9E8 ; box-shadow: 0 8px 6px -6px black;">
+                                        <h2>Transcript</h2>
+                                        <input type="text" style="box-shadow: 0 8px 6px -6px black;" />
+                                      </div>
+                                      <div class="column" style="background-color:#87CEFA;box-shadow: 0 8px 6px -6px black; ">
+                                        <h2></h2>
+                                        
+                                          <div>
+                                              <label  for="language">Status</label>
+                                             <select class='box' name="language" id="status">
+                                             
+                                             <option value="python">Dispatched</option>
+                                             <option value="c++" >Open</option>
+                                    
+                                    
+                                          </select>
+                                           </div>
+                                           <div>
+                                           <label for="language">Priority</label>
+                                           <select class='box' name="language" id="priority">
+                                            <option value="javascript" style = "background-color: red;">High</option>
+                                            <option value="python">Medum</option>
+                                            <option value="c++" >TBD</option>
+                                            
+                                          </select>
+                                          </div>
+                                          <div>
+                                          <label for="language">Emergency</label>
+                                           <select class='box' name="language" id="emergency">
+                                            <option value="javascript">Mxedical</option>
+                                            <option value="python">Crime in progress</option>
+                                            <option value="c++" >Fire</option>
+                                            <option value="java" selected>Other Emergency</option>
+                                          </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    
+                                      <div class="container" style="background-color:#ffffff">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4399540892377!2d73.02351191476833!3d19.044384687106085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3db00160053%3A0x95e9ca007676b993!2sDr.%20D%20Y%20Patil&#39;s%20Ramrao%20Adik%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1680353672081!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                      </div>
+                                    </div>            </tr>
+            <!-- <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+                <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Dracena</td>
+                <td>SP</td>
+              <td> New</td>
+            </tr>
+            <tr>  -->
+                <!-- <td colspan="6" class="hiddenRow"><div id="demo3" class="accordian-body collapse">Demo3 sadasdasdasdasdas</div></td>
+            </tr>
+        </tbody>
+    </table>
+                </div>
+            
+              </div> 
+            
+          </div>
+        </div>
+           
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
